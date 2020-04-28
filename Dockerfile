@@ -1,7 +1,7 @@
-# renovate: datasource=docker depName=renovate/renovate versioning=docker
-ARG RENOVATE_VERSION=19.220.0-slim
+# renovate: datasource=npm depName=renovate versioning=npm
+ARG RENOVATE_VERSION=19.220.0
 
-FROM renovate/renovate:$RENOVATE_VERSION
+FROM renovate/renovate:$RENOVATE_VERSION-slim
 
 USER root
 
