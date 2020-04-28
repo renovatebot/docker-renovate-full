@@ -28,6 +28,9 @@ RUN install-tool composer 1.10.5
 # renovate: datasource=docker versioning=docker
 RUN install-tool golang 1.14.2
 
+# renovate: datasource=docker
+RUN install-tool python 3.8.2
+
 # renovate: datasource=pypi
 RUN install-tool pip 20.0.2
 
