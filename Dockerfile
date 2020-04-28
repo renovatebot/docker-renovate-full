@@ -1,3 +1,3 @@
-FROM renovate/renovate:19.219.6-slim
+FROM renovate/renovate:19.220.0-slim
 
 USER 1000
