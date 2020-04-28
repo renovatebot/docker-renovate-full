@@ -1,5 +1,5 @@
 # renovate: datasource=npm depName=renovate versioning=npm
-ARG RENOVATE_VERSION=19.220.2
+ARG RENOVATE_VERSION=19.221.0
 
 FROM renovate/renovate:$RENOVATE_VERSION-slim
 
