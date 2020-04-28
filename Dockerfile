@@ -1,4 +1,7 @@
-FROM renovate/renovate:19.219.13-slim
+# renovate: datasource=docker depName=renovate/renovate versioning=docker
+ARG RENOVATE_VERSION=19.219.13-slim
+
+FROM renovate/renovate:$RENOVATE_VERSION
 
 USER root
 
