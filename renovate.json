@@ -8,7 +8,8 @@
       "packageNames": ["renovate"],
       "updateTypes": ["minor", "patch"],
       "automerge": true,
-      "masterIssueApproval": false
+      "masterIssueApproval": false,
+      "separateMinorPatch": false
     }
   ]
 }
