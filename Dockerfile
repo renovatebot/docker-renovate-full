@@ -6,6 +6,8 @@ FROM renovate/renovate:19.221.0-slim@sha256:098aa485e91511e268a39de801a82645c5e9
 
 FROM renovate/renovate:$RENOVATE_VERSION-slim
 
+ENV RENOVATE_BINARY_SOURCE=
+
 USER root
 
 # go suggests: git svn bzr mercurial
