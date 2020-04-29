@@ -5,11 +5,12 @@
   "packageRules": [
     {
       "description": "Automerge renovate minor and patch updates",
-      "packageNames": ["renovate"],
+      "packageNames": ["renovate", "renovate/renovate"],
       "updateTypes": ["minor", "patch"],
       "automerge": true,
       "masterIssueApproval": false,
-      "separateMinorPatch": false
+      "separateMinorPatch": false,
+      "groupName": "renovate"
     }
   ]
 }
