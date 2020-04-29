@@ -1,5 +1,5 @@
 # renovate: datasource=npm depName=renovate versioning=npm
-ARG RENOVATE_VERSION=19.221.4
+ARG RENOVATE_VERSION=19.222.0
 
 # dummy for rebuilding
 FROM renovate/renovate:19.222.0-slim@sha256:187eead75407faac8780f32e97dd2ebce1e5d5d7aab76ee0a48bdc1beab84e89
