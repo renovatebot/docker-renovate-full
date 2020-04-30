@@ -2,7 +2,7 @@
 ARG RENOVATE_VERSION=19.225.1
 
 # dummy for rebuilding
-FROM renovate/renovate:19.225.1-slim@sha256:c62f3c11ca9c849d595746264991725c703759314d9128e2e2099873e13e4220
+FROM renovate/renovate:19.225.2-slim@sha256:6a8ddf74b4635d1dd2d0d237e65eb10901cfc54ee458decb917c3c14d30e0137
 
 FROM renovate/renovate:$RENOVATE_VERSION-slim
 
