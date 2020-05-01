@@ -1,10 +1,4 @@
-# renovate: datasource=npm depName=renovate versioning=npm
-ARG RENOVATE_VERSION=19.225.4
-
-# dummy for rebuilding
-FROM renovate/renovate:19.225.3-slim@sha256:f10516c249cff79299096cd934015a11689dce4f83f6430029b5676b13a6cfe1
-
-FROM renovate/renovate:$RENOVATE_VERSION-slim
+FROM renovate/renovate:19.225.4-slim@sha256:75ddb102b67c5b9ff6c9b2bb912df718ac447f02105ffe048ff272ae48aaa326
 
 ENV RENOVATE_BINARY_SOURCE=
 
