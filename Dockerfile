@@ -1,4 +1,4 @@
-FROM renovate/renovate:19.231.7-slim@sha256:173ba28c2006a0e367531ea3fc3529052793f4a228f4cb49cd79dd7c1bec5312
+FROM renovate/renovate:19.231.8-slim@sha256:0a8df7a25ee6df35edbd755dcba8195ae89e8e23e32b9aa7e19cc33c10695951
 
 ENV RENOVATE_BINARY_SOURCE=
 
