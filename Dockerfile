@@ -5,9 +5,6 @@ ENV RENOVATE_BINARY_SOURCE=
 
 USER root
 
-# go suggests: git svn bzr mercurial
-RUN install-apt bzr mercurial
-
 # renovate: datasource=docker lookupName=openjdk versioning=docker
 RUN install-tool java 8
 
