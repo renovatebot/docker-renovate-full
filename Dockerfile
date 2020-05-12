@@ -1,4 +1,4 @@
-FROM renovate/renovate:19.236.4-slim@sha256:a632e16a59d2d074ed94fcd1980c37c55403a176091662085c1e405025a6de2d
+FROM renovate/renovate:19.236.5-slim@sha256:359a6a9360c44a41af1f23ea7801e988c24d43c044307fd6f93c6559ac6a2dc1
 
 # The following resets the slim base images's binarySource=docker setting back to default
 ENV RENOVATE_BINARY_SOURCE=
