@@ -23,7 +23,7 @@ RUN install-tool php 7.4
 RUN install-tool composer 1.10.6
 
 # renovate: datasource=docker versioning=docker
-RUN install-tool golang 1.14.2
+RUN install-tool golang 1.14.3
 
 # renovate: datasource=docker
 RUN install-tool python 3.8.2
