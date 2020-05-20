@@ -47,6 +47,6 @@ RUN install-tool ruby 2.5.8
 RUN install-gem cocoapods 1.9.1
 
 # renovate: datasource=npm versioning=npm
-RUN install-tool pnpm 4.12.5
+RUN install-tool pnpm 4.14.2
 
 USER 1000
