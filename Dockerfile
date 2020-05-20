@@ -41,7 +41,7 @@ RUN install-tool poetry 1.0.5
 RUN install-tool rust 1.43.1
 
 # renovate: datasource=docker versioning=docker
-RUN install-tool ruby 2.5.8
+RUN install-tool ruby 2.7.1
 
 # renovate: datasource=rubygems versioning=ruby
 RUN install-gem cocoapods 1.9.1
