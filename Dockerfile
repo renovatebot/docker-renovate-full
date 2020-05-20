@@ -1,7 +1,8 @@
+ARG RENOVATE_VERSION
+
 # update trigger
 FROM renovate/renovate:20.0.2-slim@sha256:abbda22048ceed208ad96ee7d60bfa29290415eb2639ba66344f8cc17f53d181
 
-ARG RENOVATE_VERSION
 FROM renovate/renovate:${RENOVATE_VERSION}
 
 # The following resets the slim base images's binarySource=docker setting back to default
