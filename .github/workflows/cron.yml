@@ -2,6 +2,9 @@ name: cron
 
 # start 20min after renovate slim
 on:
+  push:
+    branches:
+      - master
   schedule:
     - cron: '20 1 * * *'
 
