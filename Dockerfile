@@ -54,4 +54,6 @@ RUN install-gem cocoapods 1.9.3
 # renovate: datasource=npm versioning=npm
 RUN install-tool pnpm 4.14.4
 
+RUN npm install -g lerna
+
 USER 1000
