@@ -43,7 +43,7 @@ RUN install-pip pipenv 2018.11.26
 RUN install-tool poetry 1.0.5
 
 # renovate: datasource=docker versioning=docker
-RUN install-tool rust 1.43.1
+RUN install-tool rust 1.44.0
 
 # renovate: datasource=docker versioning=docker
 RUN install-tool ruby 2.7.1
