@@ -11,7 +11,7 @@ ENV RENOVATE_BINARY_SOURCE=
 USER root
 
 # renovate: datasource=docker lookupName=openjdk versioning=docker
-RUN install-tool java 11
+RUN install-tool java 15
 
 # renovate: datasource=gradle-version versioning=maven
 RUN install-tool gradle 6.5
