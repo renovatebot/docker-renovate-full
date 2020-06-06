@@ -37,7 +37,7 @@ RUN install-tool python 3.8.3
 RUN install-tool pip 20.1.1
 
 # renovate: datasource=pypi
-RUN install-pip pipenv 2018.11.26
+RUN install-pip pipenv 2020.6.2
 
 # renovate: datasource=github-releases lookupName=python-poetry/poetry
 RUN install-tool poetry 1.0.8
