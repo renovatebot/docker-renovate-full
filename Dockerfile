@@ -40,7 +40,7 @@ RUN install-tool pip 20.1.1
 RUN install-pip pipenv 2020.6.2
 
 # renovate: datasource=github-releases lookupName=python-poetry/poetry
-RUN install-tool poetry 1.0.8
+RUN install-tool poetry 1.0.9
 
 # renovate: datasource=docker versioning=docker
 RUN install-tool rust 1.44.0
