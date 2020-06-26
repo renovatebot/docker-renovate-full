@@ -42,6 +42,9 @@ RUN install-pip pipenv 2020.6.2
 # renovate: datasource=github-releases lookupName=python-poetry/poetry
 RUN install-tool poetry 1.0.9
 
+# renovate: datasource=pypi
+RUN install-pip hashin 0.15.0
+
 # renovate: datasource=docker versioning=docker
 RUN install-tool rust 1.44.1
 
