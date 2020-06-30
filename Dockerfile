@@ -14,7 +14,7 @@ USER root
 RUN install-tool java 11
 
 # renovate: datasource=gradle-version versioning=maven
-RUN install-tool gradle 6.5
+RUN install-tool gradle 6.5.1
 
 RUN install-tool erlang 22.0.2-1
 
