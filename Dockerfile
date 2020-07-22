@@ -30,7 +30,7 @@ RUN install-tool composer 1.10.9
 # renovate: datasource=docker versioning=docker
 RUN install-tool golang 1.14.6
 
-# renovate: datasource=github-releases lookupName=renovatebot/python
+# renovate: datasource=github-tags lookupName=renovatebot/python
 RUN install-tool python 3.8.4
 
 # renovate: datasource=pypi
