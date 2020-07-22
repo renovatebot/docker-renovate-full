@@ -31,7 +31,7 @@ RUN install-tool composer 1.10.9
 RUN install-tool golang 1.14.6
 
 # renovate: datasource=github-tags lookupName=renovatebot/python
-RUN install-tool python 3.8.4
+RUN install-tool python 3.8.5
 
 # renovate: datasource=pypi
 RUN install-tool pip 20.1.1
