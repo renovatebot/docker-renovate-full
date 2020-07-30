@@ -46,7 +46,7 @@ RUN install-tool poetry 1.0.10
 RUN install-pip hashin 0.15.0
 
 # renovate: datasource=docker versioning=docker
-RUN install-tool rust 1.45.0
+RUN install-tool rust 1.45.1
 
 # renovate: datasource=docker versioning=docker
 RUN install-tool ruby 2.7.1
