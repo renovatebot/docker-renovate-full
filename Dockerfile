@@ -55,7 +55,7 @@ RUN install-tool ruby 2.7.1
 RUN install-gem cocoapods 1.9.3
 
 # renovate: datasource=npm versioning=npm
-RUN install-tool pnpm 5.5.11
+RUN install-tool pnpm 5.5.12
 
 RUN npm install -g lerna
 
