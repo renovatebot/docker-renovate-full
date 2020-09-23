@@ -1,6 +1,6 @@
 {
   "image": "renovate",
   "datasource": "renovate-slim",
-  "startVersion": "23.0.0",
+  "startVersion": "23.20.0",
   "cache": "docker-build-cache"
 }
