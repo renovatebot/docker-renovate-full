@@ -49,7 +49,7 @@ RUN install-pip hashin 0.15.0
 RUN install-tool rust 1.46.0
 
 # renovate: datasource=docker versioning=docker
-RUN install-tool ruby 2.7.1
+RUN install-tool ruby 2.7.2
 
 # renovate: datasource=rubygems versioning=ruby
 RUN install-gem cocoapods 1.9.3
