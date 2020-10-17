@@ -34,7 +34,7 @@ RUN install-tool golang 1.15.3
 RUN install-tool python 3.9.0
 
 # renovate: datasource=pypi
-RUN install-tool pip 20.2.3
+RUN install-tool pip 20.2.4
 
 # renovate: datasource=pypi
 RUN install-pip pipenv 2020.8.13
