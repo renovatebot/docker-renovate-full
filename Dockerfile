@@ -52,7 +52,7 @@ RUN install-tool rust 1.47.0
 RUN install-tool ruby 2.7.2
 
 # renovate: datasource=rubygems versioning=ruby
-RUN install-gem cocoapods 1.9.3
+RUN install-gem cocoapods 1.10.0
 
 # renovate: datasource=npm versioning=npm
 RUN install-tool pnpm 5.9.3
