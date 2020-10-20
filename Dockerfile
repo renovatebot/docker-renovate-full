@@ -1,7 +1,7 @@
 ARG RENOVATE_VERSION
 
 # update trigger
-FROM renovate/renovate:23.48.0-slim@sha256:31c7f3b560dbfc0f5a99407b6db5975c47e1a57f875b230f5f28ba0f696f2e4c
+FROM renovate/renovate:23.53.0-slim@sha256:ac0e5d25248d9f38788db41f0a6a4efe811e06131b2754429930b0e0c21399ab
 
 FROM renovate/renovate:${RENOVATE_VERSION}-slim
 
@@ -28,13 +28,13 @@ RUN install-tool php 7.4
 RUN install-tool composer 1.10.15
 
 # renovate: datasource=docker versioning=docker
-RUN install-tool golang 1.15.2
+RUN install-tool golang 1.15.3
 
 # renovate: datasource=github-tags lookupName=renovatebot/python
 RUN install-tool python 3.9.0
 
 # renovate: datasource=pypi
-RUN install-tool pip 20.2.3
+RUN install-tool pip 20.2.4
 
 # renovate: datasource=pypi
 RUN install-pip pipenv 2020.8.13
@@ -55,7 +55,7 @@ RUN install-tool ruby 2.7.2
 RUN install-gem cocoapods 1.9.3
 
 # renovate: datasource=npm versioning=npm
-RUN install-tool pnpm 5.9.0
+RUN install-tool pnpm 5.9.3
 
 # renovate: datasource=github-releases lookupName=dotnet/sdk
 RUN install-tool dotnet 3.1.403
