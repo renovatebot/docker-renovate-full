@@ -57,6 +57,9 @@ RUN install-gem cocoapods 1.10.0
 # renovate: datasource=npm versioning=npm
 RUN install-tool pnpm 5.9.3
 
+# renovate: datasource=github-releases lookupName=dotnet/sdk
+RUN install-tool dotnet 3.1.403
+
 RUN npm install -g lerna
 
 USER 1000
