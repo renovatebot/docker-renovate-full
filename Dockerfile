@@ -40,7 +40,7 @@ RUN install-tool pip 20.2.4
 RUN install-pip pipenv 2020.8.13
 
 # renovate: datasource=github-releases lookupName=python-poetry/poetry
-RUN install-tool poetry 1.1.3
+RUN install-tool poetry 1.1.4
 
 # renovate: datasource=pypi
 RUN install-pip hashin 0.15.0
