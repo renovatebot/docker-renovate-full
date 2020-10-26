@@ -55,7 +55,7 @@ RUN install-tool ruby 2.7.2
 RUN install-gem cocoapods 1.10.0
 
 # renovate: datasource=npm versioning=npm
-RUN install-tool pnpm 5.10.1
+RUN install-tool pnpm 5.10.2
 
 # renovate: datasource=github-releases lookupName=dotnet/sdk
 RUN install-tool dotnet 3.1.403
