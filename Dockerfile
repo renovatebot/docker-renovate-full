@@ -19,7 +19,7 @@ RUN install-tool gradle 6.7
 RUN install-tool erlang 22.0.2-1
 
 # renovate: datasource=docker versioning=docker
-RUN install-tool elixir 1.10.4
+RUN install-tool elixir 1.11.1
 
 # renovate: datasource=docker versioning=docker
 RUN install-tool php 7.4
