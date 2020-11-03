@@ -19,7 +19,7 @@ jobs:
     timeout-minutes: 60
 
     steps:
-      - uses: actions/checkout@v2.3.3
+      - uses: actions/checkout@v2.3.4
 
       - name: docker-config
         uses: renovatebot/internal-tools@v1.1.15
