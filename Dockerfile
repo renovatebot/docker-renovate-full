@@ -28,7 +28,7 @@ RUN install-tool php 7.4
 RUN install-tool composer 2.0.6
 
 # renovate: datasource=docker versioning=docker
-RUN install-tool golang 1.15.4
+RUN install-tool golang 1.15.5
 
 # renovate: datasource=github-tags lookupName=renovatebot/python
 RUN install-tool python 3.9.0
