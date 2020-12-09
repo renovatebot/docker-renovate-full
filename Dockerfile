@@ -1,7 +1,7 @@
 ARG RENOVATE_VERSION
 
 # update trigger
-FROM renovate/renovate:23.97.0-slim@sha256:4a230e7878bb3f6b75d31555b546d436509e73e88021c75b1ddfd85f6894b4e6
+FROM renovate/renovate:23.99.0-slim@sha256:db4a57e6f731376abff8eaf0d6c1374b4b53f8b57d337ca83c35a5f78ca290c2
 
 FROM renovate/renovate:${RENOVATE_VERSION}-slim
 
