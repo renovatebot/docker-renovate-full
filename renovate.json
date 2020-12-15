@@ -3,7 +3,7 @@
   "extends": ["github>renovatebot/presets-internal"],
   "packageRules": [
     {
-      "packageNames": ["helm/helm"],
+      "packageNames": ["helm"],
       "extractVersion": "^v(?<version>.*)$"
     },
     {
