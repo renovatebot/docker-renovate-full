@@ -1,7 +1,5 @@
-ARG RENOVATE_VERSION
-
-# update trigger
-FROM renovate/renovate:24.4.0-slim@sha256:0ddbe4a43323795fd6d7bb21f5c65a2a75f9fb06cbbf0c556d286252161e99a6
+# renovate: datasource=docker lookupName=renovate/renovate
+ARG RENOVATE_VERSION=24.4.0
 
 FROM renovate/renovate:${RENOVATE_VERSION}-slim
 

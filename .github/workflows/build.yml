@@ -8,10 +8,6 @@ on:
 
   pull_request:
 
-env:
-  # https://github.com/chalk/supports-color/issues/106
-  FORCE_COLOR: true
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -21,11 +17,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2.3.4
 
-      - name: docker-config
-        uses: renovatebot/internal-tools@v1.2.10
-        with:
-          command: docker-config
-
       - name: Docker registry login
         if: ${{github.ref == 'refs/heads/master'}}
         run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
@@ -33,6 +24,6 @@ jobs:
       - name: Build and Publish
         uses: renovatebot/internal-tools@v1.2.10
         with:
-          command: "docker-builder"
-          last-only: true
+          command: docker-builder
           dry-run: ${{github.ref != 'refs/heads/master'}}
+          last-only: true

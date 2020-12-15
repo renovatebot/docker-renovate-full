@@ -5,6 +5,10 @@
     {
       "packageNames": ["helm/helm"],
       "extractVersion": "^v(?<version>.*)$"
+    },
+    {
+      "packageNames": ["renovate/renovate"],
+      "extractVersion": "^(?<version>\\d+\\.\\d+\\.\\d+)-slim$"
     }
   ]
 }
