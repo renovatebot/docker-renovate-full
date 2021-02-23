@@ -29,7 +29,7 @@ RUN install-tool composer 2.0.9
 RUN install-tool golang 1.16.0
 
 # renovate: datasource=github-releases lookupName=renovatebot/python
-RUN install-tool python 3.9.1
+RUN install-tool python 3.9.2
 
 # renovate: datasource=pypi
 RUN install-pip pipenv 2020.11.15
