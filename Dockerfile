@@ -35,7 +35,7 @@ RUN install-tool python 3.9.2
 RUN install-pip pipenv 2020.11.15
 
 # renovate: datasource=github-releases lookupName=python-poetry/poetry
-RUN install-tool poetry 1.1.4
+RUN install-tool poetry 1.1.5
 
 # renovate: datasource=pypi
 RUN install-pip hashin 0.15.0
