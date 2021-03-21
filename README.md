@@ -5,7 +5,7 @@
 # docker-renovate-full
 
 This repository is the source for the Docker Hub image `renovate/renovate`.
-Commits to the `master` branch are automatically built and published.
+Commits to the `main` branch are automatically built and published.
 It will publish the `latest` and the versioned tags without suffix.
 For the `slim` image see [here](https://github.com/renovatebot/docker-renovate).
 

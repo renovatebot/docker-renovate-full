@@ -4,7 +4,7 @@ name: cron
 on:
   push:
     branches:
-      - master
+      - main
   schedule:
     - cron: '20 1 * * *'
 
@@ -22,5 +22,5 @@ jobs:
         uses: renovatebot/internal-tools@v1.3.6
         with:
           command: docker-builder
-          dry-run: ${{github.ref != 'refs/heads/master'}}
+          dry-run: ${{github.ref != 'refs/heads/main'}}
           prune: true
