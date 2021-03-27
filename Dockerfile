@@ -1,5 +1,5 @@
 # renovate: datasource=docker depName=renovate/renovate
-ARG RENOVATE_VERSION=24.95.1
+ARG RENOVATE_VERSION=24.96.1
 
 FROM renovate/renovate:${RENOVATE_VERSION}-slim
 
