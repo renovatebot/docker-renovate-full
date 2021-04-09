@@ -19,8 +19,8 @@ RUN install-tool erlang 22.3.2
 # renovate: datasource=docker versioning=docker
 RUN install-tool elixir 1.11.4
 
-# renovate: datasource=docker versioning=docker
-RUN install-tool php 7.4
+# renovate: datasource=github-releases lookupName=containerbase/php-prebuild
+RUN install-tool php 7.4.16
 
 # renovate: datasource=github-releases lookupName=composer/composer
 RUN install-tool composer 2.0.12
