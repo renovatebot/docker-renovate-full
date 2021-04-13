@@ -53,7 +53,7 @@ RUN install-gem cocoapods 1.10.1
 RUN install-tool pnpm 5.18.9
 
 # renovate: datasource=docker lookupName=mcr.microsoft.com/dotnet/sdk
-RUN install-tool dotnet 3.1.407
+RUN install-tool dotnet 3.1.408
 
 RUN npm install -g lerna
 
