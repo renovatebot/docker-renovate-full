@@ -1,12 +1,25 @@
 # renovate: datasource=docker depName=renovate/renovate
 ARG RENOVATE_VERSION=24.116.2
 
-FROM renovate/renovate:${RENOVATE_VERSION}-slim
+FROM renovate/renovate:${RENOVATE_VERSION}-slim as distsource
 
-# The following resets the slim base images's binarySource=docker setting back to default
-ENV RENOVATE_BINARY_SOURCE=
+# Base image
+#============
+FROM renovate/buildpack:5@sha256:7d82f011ac21f564778ff9a213a641a9dd8d9a16e5c9dbaf9a4379487bdc8c12
 
-USER root
+LABEL name="renovate"
+LABEL org.opencontainers.image.source="https://github.com/renovatebot/renovate" \
+  org.opencontainers.image.url="https://renovatebot.com" \
+  org.opencontainers.image.licenses="AGPL-3.0-only"
+
+# renovate: datasource=docker versioning=docker
+RUN install-tool node 14.16.1
+
+# renovate: datasource=npm versioning=npm
+RUN install-tool yarn 1.22.10
+
+# renovate: datasource=docker versioning=docker
+RUN install-tool docker 20.10.6
 
 # renovate: datasource=docker lookupName=openjdk versioning=docker
 RUN install-tool java 11
@@ -60,4 +73,23 @@ RUN npm install -g lerna
 # renovate: datasource=github-releases lookupName=helm/helm
 RUN install-tool helm v3.5.4
 
+WORKDIR /usr/src/app
+
+COPY --from=distsource /usr/src/app/package.json usr/src/app/package.json
+COPY --from=distsource /usr/src/app/dist /usr/src/app/dist
+
+# TODO: remove
+COPY --from=distsource /usr/src/app/node_modules /usr/src/app/node_modules
+
+COPY --from=distsource /usr/local/bin/docker-entrypoint.sh /usr/local/bin/
+
+RUN ln -sf /usr/src/app/dist/renovate.js /usr/local/bin/renovate;
+RUN ln -sf /usr/src/app/dist/config-validator.js /usr/local/bin/renovate-config-validator;
+CMD ["renovate"]
+
+RUN npm --no-git-tag-version version ${RENOVATE_VERSION} && renovate --version;
+
+LABEL org.opencontainers.image.version="${RENOVATE_VERSION}"
+
+# Numeric user ID for the ubuntu user. Used to indicate a non-root user to OpenShift
 USER 1000
