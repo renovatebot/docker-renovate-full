@@ -3,5 +3,5 @@
   "startVersion": "23.50.0",
   "cache": "docker-build-cache",
   "maxVersions": 10,
-  "extractVersion": "^(?<version>\\d+\\.\\d+\\.\\d+)-slim$"
+  "extractVersion": "^(?<version>\\d+\\.\\d+\\.\\d+)-slim as "
 }
