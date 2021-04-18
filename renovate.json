@@ -4,7 +4,7 @@
   "packageRules": [
     {
       "packageNames": ["renovate/renovate"],
-      "extractVersion": "^(?<version>\\d+\\.\\d+\\.\\d+)-slim as "
+      "extractVersion": "^(?<version>\\d+\\.\\d+\\.\\d+)-slim$"
     }
   ]
 }
