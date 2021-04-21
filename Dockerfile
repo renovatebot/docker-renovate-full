@@ -48,14 +48,6 @@ RUN yarn install --frozen-lockfile --production
 RUN node -e "new require('re2')('.*').exec('test')"
 
 
-# TODO: enable
-#COPY src src
-#RUN yarn build
-# compatability file
-#RUN echo "require('./index.js');" > dist/renovate.js
-#RUN cp -r ./node_modules/renovate/data ./dist/data
-
-
 # Final image
 #============
 FROM base as final
