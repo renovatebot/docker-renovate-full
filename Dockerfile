@@ -1,11 +1,9 @@
-# renovate: datasource=docker depName=renovate/renovate
+# renovate: datasource=npm depName=renovate versioning=npm
 ARG RENOVATE_VERSION=24.116.2
-
-FROM renovate/renovate:${RENOVATE_VERSION}-slim as distsource
 
 # Base image
 #============
-FROM renovate/buildpack:5@sha256:7d82f011ac21f564778ff9a213a641a9dd8d9a16e5c9dbaf9a4379487bdc8c12
+FROM renovate/buildpack:5@sha256:7d82f011ac21f564778ff9a213a641a9dd8d9a16e5c9dbaf9a4379487bdc8c12 AS base
 
 LABEL name="renovate"
 LABEL org.opencontainers.image.source="https://github.com/renovatebot/renovate" \
@@ -17,6 +15,50 @@ RUN install-tool node 14.16.1
 
 # renovate: datasource=npm versioning=npm
 RUN install-tool yarn 1.22.10
+
+WORKDIR /usr/src/app
+
+# Build image
+#============
+FROM base as tsbuild
+
+# use buildin python to faster build
+RUN install-apt build-essential python3
+RUN npm install -g yarn-deduplicate
+
+COPY package.json .
+COPY yarn.lock .
+
+RUN yarn install --frozen-lockfile
+
+COPY tsconfig.json .
+COPY tsconfig.app.json .
+COPY src src
+
+RUN set -ex; \
+  yarn build; \
+  chmod +x dist/*.js;
+
+ARG RENOVATE_VERSION
+RUN yarn add renovate@${RENOVATE_VERSION}
+RUN yarn-deduplicate --strategy highest
+RUN yarn install --frozen-lockfile --production
+
+# check is re2 is usable
+RUN node -e "new require('re2')('.*').exec('test')"
+
+
+# TODO: enable
+#COPY src src
+#RUN yarn build
+# compatability file
+#RUN echo "require('./index.js');" > dist/renovate.js
+#RUN cp -r ./node_modules/renovate/data ./dist/data
+
+
+# Final image
+#============
+FROM base as final
 
 # renovate: datasource=docker versioning=docker
 RUN install-tool docker 20.10.6
@@ -75,17 +117,19 @@ RUN install-tool helm v3.5.4
 
 WORKDIR /usr/src/app
 
-COPY --from=distsource /usr/src/app/package.json usr/src/app/package.json
-COPY --from=distsource /usr/src/app/dist /usr/src/app/dist
+COPY --from=tsbuild /usr/src/app/package.json package.json
+COPY --from=tsbuild /usr/src/app/dist dist
 
 # TODO: remove
-COPY --from=distsource /usr/src/app/node_modules /usr/src/app/node_modules
+COPY --from=tsbuild /usr/src/app/node_modules node_modules
 
-COPY --from=distsource /usr/local/bin/docker-entrypoint.sh /usr/local/bin/
-
+# exec helper
+COPY bin/ /usr/local/bin/
 RUN ln -sf /usr/src/app/dist/renovate.js /usr/local/bin/renovate;
 RUN ln -sf /usr/src/app/dist/config-validator.js /usr/local/bin/renovate-config-validator;
 CMD ["renovate"]
+
+ARG RENOVATE_VERSION
 
 RUN npm --no-git-tag-version version ${RENOVATE_VERSION} && renovate --version;
 
