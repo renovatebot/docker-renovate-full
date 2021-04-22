@@ -40,6 +40,7 @@ RUN set -ex; \
   chmod +x dist/*.js;
 
 ARG RENOVATE_VERSION
+RUN npm --no-git-tag-version version ${RENOVATE_VERSION}
 RUN yarn add renovate@${RENOVATE_VERSION}
 RUN yarn-deduplicate --strategy highest
 RUN yarn install --frozen-lockfile --production
@@ -107,12 +108,8 @@ RUN npm install -g lerna
 # renovate: datasource=github-releases lookupName=helm/helm
 RUN install-tool helm v3.5.4
 
-WORKDIR /usr/src/app
-
 COPY --from=tsbuild /usr/src/app/package.json package.json
 COPY --from=tsbuild /usr/src/app/dist dist
-
-# TODO: remove
 COPY --from=tsbuild /usr/src/app/node_modules node_modules
 
 # exec helper
@@ -123,7 +120,7 @@ CMD ["renovate"]
 
 ARG RENOVATE_VERSION
 
-RUN npm --no-git-tag-version version ${RENOVATE_VERSION} && renovate --version;
+RUN renovate --version;
 
 LABEL org.opencontainers.image.version="${RENOVATE_VERSION}"
 
