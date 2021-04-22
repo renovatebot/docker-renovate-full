@@ -22,5 +22,4 @@ jobs:
         uses: renovatebot/internal-tools@v1.5.6
         with:
           command: docker-builder
-          dry-run: ${{github.ref != 'refs/heads/main'}}
-          prune: false
+          prune: true
