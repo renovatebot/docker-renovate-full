@@ -1,12 +1,11 @@
 name: cron
 
-# start 20min after renovate slim
 on:
   push:
     branches:
       - main
   schedule:
-    - cron: '20 1 * * *'
+    - cron: '0 1 * * *'
 
 jobs:
   build:
