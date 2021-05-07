@@ -89,7 +89,7 @@ RUN install-tool poetry 1.1.6
 RUN install-pip hashin 0.15.0
 
 # renovate: datasource=docker versioning=docker
-RUN install-tool rust 1.51.0
+RUN install-tool rust 1.52.0
 
 # renovate: datasource=github-releases lookupName=renovatebot/ruby
 RUN install-tool ruby 3.0.0
