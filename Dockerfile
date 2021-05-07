@@ -60,7 +60,7 @@ RUN install-tool docker 20.10.6
 RUN install-tool java 11
 
 # renovate: datasource=gradle-version versioning=maven
-RUN install-tool gradle 6.8.3
+RUN install-tool gradle 6.9
 
 RUN install-tool erlang 22.3.2
 
