@@ -3,8 +3,15 @@
   "extends": ["github>renovatebot/.github"],
   "packageRules": [
     {
-      "packageNames": ["renovate/renovate"],
-      "extractVersion": "^(?<version>\\d+\\.\\d+\\.\\d+)-slim$"
+      "matchPackageNames": ["renovate"],
+      "automerge": true,
+      "separateMinorPatch": false,
+      "stabilityDays": 0
+    },
+    {
+      "description": "Do not pin package.json deps",
+      "matchFiles": ["package.json"],
+      "rangeStrategy": "replace"
     }
   ]
 }
