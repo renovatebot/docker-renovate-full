@@ -84,13 +84,14 @@ RUN install-tool ruby 3.0.1
 # renovate: datasource=rubygems versioning=ruby
 RUN install-gem cocoapods 1.10.1
 
-# renovate: datasource=npm versioning=npm
-RUN install-tool pnpm 5.18.9
-
 # renovate: datasource=docker lookupName=mcr.microsoft.com/dotnet/sdk
 RUN install-tool dotnet 3.1.409
 
-RUN npm install -g lerna
+# renovate: datasource=npm versioning=npm
+RUN install-tool pnpm 5.18.9
+
+# renovate: datasource=npm versioning=npm
+RUN install-npm lerna 4.0.0
 
 # renovate: datasource=github-releases lookupName=helm/helm
 RUN install-tool helm v3.5.4
