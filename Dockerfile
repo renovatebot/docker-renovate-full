@@ -64,7 +64,7 @@ RUN install-tool composer 2.0.14
 RUN install-tool golang 1.16.4
 
 # renovate: datasource=github-releases lookupName=containerbase/python-prebuild
-RUN install-tool python 3.9.3
+RUN install-tool python 3.9.5
 
 # renovate: datasource=pypi
 RUN install-pip pipenv 2020.11.15
@@ -79,7 +79,7 @@ RUN install-pip hashin 0.15.0
 RUN install-tool rust 1.52.1
 
 # renovate: datasource=github-releases lookupName=containerbase/ruby-prebuild
-RUN install-tool ruby 3.0.0
+RUN install-tool ruby 3.0.1
 
 # renovate: datasource=rubygems versioning=ruby
 RUN install-gem cocoapods 1.10.1
