@@ -63,7 +63,7 @@ RUN install-tool composer 2.0.14
 # renovate: datasource=docker versioning=docker
 RUN install-tool golang 1.16.4
 
-# renovate: datasource=github-releases lookupName=renovatebot/python
+# renovate: datasource=github-releases lookupName=containerbase/python-prebuild
 RUN install-tool python 3.9.3
 
 # renovate: datasource=pypi
@@ -78,7 +78,7 @@ RUN install-pip hashin 0.15.0
 # renovate: datasource=docker versioning=docker
 RUN install-tool rust 1.52.1
 
-# renovate: datasource=github-releases lookupName=renovatebot/ruby
+# renovate: datasource=github-releases lookupName=containerbase/ruby-prebuild
 RUN install-tool ruby 3.0.0
 
 # renovate: datasource=rubygems versioning=ruby
