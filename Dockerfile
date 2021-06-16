@@ -94,7 +94,7 @@ RUN install-tool pnpm 6.7.4
 RUN install-npm lerna 4.0.0
 
 # renovate: datasource=github-releases lookupName=helm/helm
-RUN install-tool helm v3.6.0
+RUN install-tool helm v3.6.1
 
 COPY --from=tsbuild /usr/src/app/package.json package.json
 COPY --from=tsbuild /usr/src/app/dist dist
