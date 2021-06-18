@@ -76,7 +76,7 @@ RUN install-tool poetry 1.1.6
 RUN install-pip hashin 0.15.0
 
 # renovate: datasource=docker versioning=docker
-RUN install-tool rust 1.52.1
+RUN install-tool rust 1.53.0
 
 # renovate: datasource=github-releases lookupName=containerbase/ruby-prebuild
 RUN install-tool ruby 3.0.1
