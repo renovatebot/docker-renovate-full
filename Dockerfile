@@ -52,7 +52,7 @@ RUN install-tool gradle 6.9
 RUN install-tool erlang 22.3.2
 
 # renovate: datasource=docker versioning=docker
-RUN install-tool elixir 1.12.1
+RUN install-tool elixir 1.12.2
 
 # renovate: datasource=github-releases lookupName=containerbase/php-prebuild
 RUN install-tool php 7.4.20
