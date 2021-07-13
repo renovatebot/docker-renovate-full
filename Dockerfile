@@ -88,7 +88,7 @@ RUN install-tool ruby 3.0.2
 RUN install-gem cocoapods 1.10.1
 
 # renovate: datasource=docker lookupName=mcr.microsoft.com/dotnet/sdk
-RUN install-tool dotnet 3.1.410
+RUN install-tool dotnet 3.1.411
 
 # renovate: datasource=npm versioning=npm
 RUN install-tool pnpm 6.9.1
