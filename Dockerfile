@@ -41,7 +41,7 @@ RUN set -ex; \
 FROM base as final
 
 # renovate: datasource=docker versioning=docker
-RUN install-tool docker 20.10.7
+RUN install-tool docker 20.10.8
 
 # renovate: datasource=docker lookupName=openjdk versioning=docker
 RUN install-tool java 11
