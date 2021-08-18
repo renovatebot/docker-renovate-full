@@ -43,10 +43,10 @@ FROM base as final
 # renovate: datasource=docker versioning=docker
 RUN install-tool docker 20.10.8
 
-# renovate: datasource=docker lookupName=openjdk versioning=docker
-RUN install-tool java 11
+# renovate: datasource=adoptium-java
+RUN install-tool java 11.0.12+7
 
-# renovate: datasource=gradle-version versioning=maven
+# renovate: datasource=gradle-version versioning=gradle
 RUN install-tool gradle 6.9
 
 RUN install-tool erlang 22.3.2
