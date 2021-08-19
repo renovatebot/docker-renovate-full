@@ -11,7 +11,7 @@ For the `slim` image see [here](https://github.com/renovatebot/docker-renovate).
 
 ## Usage
 
-Read the [docs](https://docs.renovatebot.com/self-hosting) for more information on self-hosting Renovate with Docker.
+Read the [docs](https://docs.renovatebot.com/getting-started/running/#self-hosting-renovate) for more information on self-hosting Renovate with Docker.
 
 ### Samples
 
