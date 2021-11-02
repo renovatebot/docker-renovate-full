@@ -71,6 +71,8 @@ RUN install-pip pipenv 2020.11.15
 
 # renovate: datasource=github-releases lookupName=python-poetry/poetry
 RUN install-tool poetry 1.1.11
+# Workaround until https://github.com/python-poetry/poetry/issues/4688 is fixed
+RUN /usr/local/poetry/*/venv/bin/pip install cachecontrol==0.12.6
 
 # renovate: datasource=pypi
 RUN install-pip hashin 0.15.0
