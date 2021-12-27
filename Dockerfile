@@ -82,7 +82,7 @@ RUN install-pip pip-tools 6.4.0
 RUN install-tool rust 1.57.0
 
 # renovate: datasource=github-releases lookupName=containerbase/ruby-prebuild
-RUN install-tool ruby 3.0.3
+RUN install-tool ruby 3.1.0
 
 # renovate: datasource=rubygems versioning=ruby
 RUN install-gem cocoapods 1.11.2
