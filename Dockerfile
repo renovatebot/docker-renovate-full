@@ -73,7 +73,7 @@ RUN install-pip pipenv 2020.11.15
 RUN install-tool poetry 1.1.12
 
 # renovate: datasource=pypi
-RUN install-pip hashin 0.15.0
+RUN install-pip hashin 0.16.0
 
 # renovate: datasource=pypi
 RUN install-pip pip-tools 6.4.0
