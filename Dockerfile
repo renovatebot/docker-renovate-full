@@ -85,6 +85,9 @@ RUN install-tool rust 1.58.1
 RUN install-tool ruby 3.1.0
 
 # renovate: datasource=rubygems versioning=ruby
+RUN install-gem bundler 2.3.5
+
+# renovate: datasource=rubygems versioning=ruby
 RUN install-gem cocoapods 1.11.2
 
 # renovate: datasource=docker lookupName=mcr.microsoft.com/dotnet/sdk
