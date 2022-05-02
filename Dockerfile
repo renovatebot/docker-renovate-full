@@ -95,7 +95,7 @@ RUN install-gem cocoapods 1.11.3
 RUN install-tool dotnet 6.0.202
 
 # renovate: datasource=npm versioning=npm
-RUN install-tool pnpm 6.32.9
+RUN install-tool pnpm 6.32.10
 
 # renovate: datasource=npm versioning=npm
 RUN install-npm lerna 4.0.0
