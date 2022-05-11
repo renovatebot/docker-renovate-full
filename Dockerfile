@@ -62,7 +62,7 @@ RUN install-tool php 7.4.29
 RUN install-tool composer 2.3.5
 
 # renovate: datasource=docker versioning=docker
-RUN install-tool golang 1.18.1
+RUN install-tool golang 1.18.2
 
 # renovate: datasource=github-releases lookupName=containerbase/python-prebuild
 RUN install-tool python 3.10.4
