@@ -1,9 +1,9 @@
 # renovate: datasource=npm depName=renovate versioning=npm
-ARG RENOVATE_VERSION=32.131.2
+ARG RENOVATE_VERSION=32.143.1
 
 # Base image
 #============
-FROM renovate/buildpack:6@sha256:7df4265ac86591f6909e9e2c73b4e32e9fe06e5b89405cea1addfc213bc94aef AS base
+FROM renovate/buildpack:6@sha256:f2f7e2e9f92b5294fbd94ea909f4725069eb59579e7512913e2bd4bf89ff2ec7 AS base
 
 LABEL name="renovate"
 LABEL org.opencontainers.image.source="https://github.com/renovatebot/renovate" \
@@ -67,11 +67,11 @@ RUN install-tool php 7.4.30
 # renovate: datasource=github-releases lookupName=composer/composer
 RUN install-tool composer 2.3.10
 
-# renovate: datasource=docker versioning=docker
-RUN install-tool golang 1.18.4
+# renovate: datasource=golang-version
+RUN install-tool golang 1.19.0
 
 # renovate: datasource=github-releases lookupName=containerbase/python-prebuild
-RUN install-tool python 3.10.5
+RUN install-tool python 3.10.6
 
 # renovate: datasource=pypi
 RUN install-pip pipenv 2022.7.24
