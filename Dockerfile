@@ -65,7 +65,7 @@ RUN install-tool elixir 1.13.4
 RUN install-tool php 7.4.30
 
 # renovate: datasource=github-releases lookupName=composer/composer
-RUN install-tool composer 2.4.0
+RUN install-tool composer 2.4.1
 
 # renovate: datasource=golang-version
 RUN install-tool golang 1.19.0
