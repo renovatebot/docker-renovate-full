@@ -47,7 +47,7 @@ RUN set -ex; \
 FROM base as final
 
 # renovate: datasource=docker versioning=docker
-RUN install-tool docker 20.10.19
+RUN install-tool docker 20.10.20
 
 # renovate: datasource=adoptium-java
 RUN install-tool java 11.0.16+101
