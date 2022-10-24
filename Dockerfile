@@ -50,7 +50,7 @@ FROM base as final
 RUN install-tool docker 20.10.20
 
 # renovate: datasource=adoptium-java
-RUN install-tool java 11.0.16+101
+RUN install-tool java 17.0.4+101
 
 # renovate: datasource=gradle-version versioning=gradle
 RUN install-tool gradle 7.5.1
