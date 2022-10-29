@@ -62,7 +62,7 @@ RUN install-tool erlang 25.1.2.0
 RUN install-tool elixir 1.14.1
 
 # renovate: datasource=github-releases lookupName=containerbase/php-prebuild
-RUN install-tool php 8.1.11
+RUN install-tool php 8.1.12
 
 # renovate: datasource=github-releases lookupName=composer/composer
 RUN install-tool composer 2.4.4
