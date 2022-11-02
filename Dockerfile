@@ -112,6 +112,9 @@ RUN install-tool helm v3.10.1
 # renovate: datasource=github-releases lookupName=jsonnet-bundler/jsonnet-bundler
 RUN install-tool jb v0.5.1
 
+# renovate: datasource=github-tags packageName=NixOS/nix
+RUN install-tool nix 2.11.1
+
 COPY --from=tsbuild /usr/src/app/package.json package.json
 COPY --from=tsbuild /usr/src/app/dist dist
 COPY --from=tsbuild /usr/src/app/node_modules node_modules
