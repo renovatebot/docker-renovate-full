@@ -98,7 +98,7 @@ RUN install-gem bundler 2.3.26
 RUN install-gem cocoapods 1.11.3
 
 # renovate: datasource=docker lookupName=mcr.microsoft.com/dotnet/sdk
-RUN install-tool dotnet 6.0.403
+RUN install-tool dotnet 6.0.404
 
 # renovate: datasource=npm versioning=npm
 RUN install-tool pnpm 7.18.1
