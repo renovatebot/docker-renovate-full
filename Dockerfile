@@ -3,7 +3,7 @@ ARG RENOVATE_VERSION=34.71.0
 
 # Base image
 #============
-FROM ghcr.io/containerbase/buildpack:5.8.0@sha256:acc4b558a028ada86c1c47c8ab62bb06c4a0fba8abcab65235fcd1d36f8fbdb6 AS base
+FROM ghcr.io/containerbase/buildpack:5.8.1@sha256:ae37c2d3f385ee7cff28019ae18ccd945f0faae632be596955c0de361c663c47 AS base
 
 LABEL name="renovate"
 LABEL org.opencontainers.image.source="https://github.com/renovatebot/renovate" \
@@ -17,34 +17,6 @@ RUN install-tool node v16.19.0
 RUN install-tool yarn 1.22.19
 
 WORKDIR /usr/src/app
-
-# Build image
-#============
-FROM base as tsbuild
-
-COPY . .
-
-RUN set -ex; \
-  yarn install; \
-  yarn build; \
-  chmod +x dist/*.js;
-
-# hardcode node version to renovate
-RUN set -ex; \
-  NODE_VERSION=$(node -v | cut -c2-); \
-  sed -i "1 s:.*:#\!\/opt\/buildpack\/tools\/node\/${NODE_VERSION}\/bin\/node:" "dist/renovate.js"; \
-  sed -i "1 s:.*:#\!\/opt\/buildpack\/tools\/node\/${NODE_VERSION}\/bin\/node:" "dist/config-validator.js";
-
-ARG RENOVATE_VERSION
-RUN set -ex; \
-  yarn version --new-version ${RENOVATE_VERSION}; \
-  yarn add -E  renovate@${RENOVATE_VERSION} --production;  \
-  node -e "new require('re2')('.*').exec('test')";
-
-
-# Final image
-#============
-FROM base as final
 
 # renovate: datasource=docker versioning=docker
 RUN install-tool docker 20.10.22
@@ -112,23 +84,14 @@ RUN install-tool helm v3.10.3
 # renovate: datasource=github-releases lookupName=jsonnet-bundler/jsonnet-bundler
 RUN install-tool jb v0.5.1
 
-COPY --from=tsbuild /usr/src/app/package.json package.json
-COPY --from=tsbuild /usr/src/app/dist dist
-COPY --from=tsbuild /usr/src/app/node_modules node_modules
-
 # exec helper
 COPY bin/ /usr/local/bin/
-RUN ln -sf /usr/src/app/dist/renovate.js /usr/local/bin/renovate;
-RUN ln -sf /usr/src/app/dist/config-validator.js /usr/local/bin/renovate-config-validator;
 CMD ["renovate"]
 
-
-RUN set -ex; \
-  renovate --version; \
-  renovate-config-validator; \
-  node -e "new require('re2')('.*').exec('test')";
-
 ARG RENOVATE_VERSION
+
+RUN install-tool renovate
+
 LABEL org.opencontainers.image.version="${RENOVATE_VERSION}"
 
 # Numeric user ID for the ubuntu user. Used to indicate a non-root user to OpenShift
