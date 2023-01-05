@@ -1,9 +1,9 @@
 # renovate: datasource=npm depName=renovate versioning=npm
-ARG RENOVATE_VERSION=34.72.1
+ARG RENOVATE_VERSION=34.83.1
 
 # Base image
 #============
-FROM ghcr.io/containerbase/buildpack:5.9.0@sha256:18889cedcddb981849c4deb7819f7433e89e4411fb7eab21c0d9ac60f14f3047 AS base
+FROM ghcr.io/containerbase/buildpack:5.10.2@sha256:9715543c3b51047ab5837d8a1a12c0a4b4b2caee6494eea4964eb248bfbbe110 AS base
 
 LABEL name="renovate"
 LABEL org.opencontainers.image.source="https://github.com/renovatebot/renovate" \
@@ -61,10 +61,10 @@ RUN install-pip pip-tools 6.12.1
 RUN install-tool rust 1.66.0
 
 # renovate: datasource=github-releases lookupName=containerbase/ruby-prebuild
-RUN install-tool ruby 3.1.3
+RUN install-tool ruby 3.2.0
 
 # renovate: datasource=rubygems versioning=ruby
-RUN install-tool bundler 2.3.26
+RUN install-tool bundler 2.4.2
 
 # renovate: datasource=rubygems versioning=ruby
 RUN install-tool cocoapods 1.11.3
@@ -73,10 +73,10 @@ RUN install-tool cocoapods 1.11.3
 RUN install-tool dotnet 6.0.404
 
 # renovate: datasource=npm versioning=npm
-RUN install-tool pnpm 7.18.2
+RUN install-tool pnpm 7.21.0
 
 # renovate: datasource=npm versioning=npm
-RUN install-npm lerna 6.1.0
+RUN install-npm lerna 6.3.0
 
 # renovate: datasource=github-releases lookupName=helm/helm
 RUN install-tool helm v3.10.3
