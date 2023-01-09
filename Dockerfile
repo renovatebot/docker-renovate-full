@@ -1,5 +1,5 @@
 # renovate: datasource=npm depName=renovate versioning=npm
-ARG RENOVATE_VERSION=34.83.1
+ARG RENOVATE_VERSION=34.94.0
 
 # Base image
 #============
@@ -34,7 +34,7 @@ RUN install-tool erlang 25.2.0.0
 RUN install-tool elixir 1.14.2
 
 # renovate: datasource=github-releases lookupName=containerbase/php-prebuild
-RUN install-tool php 8.2.0
+RUN install-tool php 8.2.1
 
 # renovate: datasource=github-releases lookupName=composer/composer
 RUN install-tool composer 2.5.1
@@ -64,7 +64,7 @@ RUN install-tool rust 1.66.0
 RUN install-tool ruby 3.2.0
 
 # renovate: datasource=rubygems versioning=ruby
-RUN install-tool bundler 2.4.2
+RUN install-tool bundler 2.4.3
 
 # renovate: datasource=rubygems versioning=ruby
 RUN install-tool cocoapods 1.11.3
