@@ -22,7 +22,7 @@ WORKDIR /usr/src/app
 RUN install-tool docker 20.10.22
 
 # renovate: datasource=adoptium-java
-RUN install-tool java 17.0.5+8
+RUN install-tool java 17.0.6+10
 
 # renovate: datasource=gradle-version versioning=gradle
 RUN install-tool gradle 7.6
