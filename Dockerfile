@@ -40,7 +40,7 @@ RUN install-tool php 8.2.1
 RUN install-tool composer 2.5.1
 
 # renovate: datasource=golang-version
-RUN install-tool golang 1.19.5
+RUN install-tool golang 1.20.0
 
 # renovate: datasource=github-releases lookupName=containerbase/python-prebuild
 RUN install-tool python 3.11.1
