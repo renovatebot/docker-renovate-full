@@ -1,9 +1,9 @@
 # renovate: datasource=npm depName=renovate versioning=npm
-ARG RENOVATE_VERSION=34.120.0
+ARG RENOVATE_VERSION=34.138.1
 
 # Base image
 #============
-FROM ghcr.io/containerbase/buildpack:6.1.1@sha256:48458bddf8116ce5dd6514f979ae89d1f24d791e5e0ecb23dd06bbb778957caa AS base
+FROM ghcr.io/containerbase/buildpack:6.1.3@sha256:165bc6512e059c166b1ac1d1fc1d31537295919be6d5bee59f8498d5f4758f6d AS base
 
 LABEL name="renovate"
 LABEL org.opencontainers.image.source="https://github.com/renovatebot/renovate" \
@@ -40,10 +40,10 @@ RUN install-tool elixir 1.14.3
 RUN install-tool php 8.2.2
 
 # renovate: datasource=github-releases lookupName=composer/composer
-RUN install-tool composer 2.5.1
+RUN install-tool composer 2.5.3
 
 # renovate: datasource=golang-version
-RUN install-tool golang 1.20.0
+RUN install-tool golang 1.20.1
 
 # renovate: datasource=github-releases lookupName=containerbase/python-prebuild
 RUN install-tool python 3.11.1
@@ -61,7 +61,7 @@ RUN install-pip hashin 0.17.0
 RUN install-pip pip-tools 6.12.2
 
 # renovate: datasource=docker versioning=docker
-RUN install-tool rust 1.67.0
+RUN install-tool rust 1.67.1
 
 # renovate: datasource=github-releases lookupName=containerbase/ruby-prebuild
 RUN install-tool ruby 3.2.0
@@ -73,16 +73,16 @@ RUN install-tool bundler 2.4.6
 RUN install-tool cocoapods 1.11.3
 
 # renovate: datasource=docker lookupName=mcr.microsoft.com/dotnet/sdk
-RUN install-tool dotnet 6.0.405
+RUN install-tool dotnet 6.0.406
 
 # renovate: datasource=npm versioning=npm
-RUN install-tool pnpm 7.26.1
+RUN install-tool pnpm 7.26.3
 
 # renovate: datasource=npm versioning=npm
 RUN install-npm lerna 6.4.1
 
 # renovate: datasource=github-releases lookupName=helm/helm
-RUN install-tool helm v3.11.0
+RUN install-tool helm v3.11.1
 
 # renovate: datasource=github-releases lookupName=jsonnet-bundler/jsonnet-bundler
 RUN install-tool jb v0.5.1
