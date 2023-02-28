@@ -70,7 +70,7 @@ RUN install-tool ruby 3.2.1
 RUN install-tool bundler 2.4.7
 
 # renovate: datasource=rubygems versioning=ruby
-RUN install-tool cocoapods 1.11.3
+RUN install-tool cocoapods 1.12.0
 
 # renovate: datasource=docker lookupName=mcr.microsoft.com/dotnet/sdk
 RUN install-tool dotnet 6.0.406
