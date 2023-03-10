@@ -49,7 +49,7 @@ RUN install-tool golang 1.20.2
 RUN install-tool python 3.11.2
 
 # renovate: datasource=pypi
-RUN install-pip pipenv 2022.12.19
+RUN install-pip pipenv 2023.2.18
 
 # renovate: datasource=github-releases lookupName=python-poetry/poetry
 RUN install-tool poetry 1.4.0
