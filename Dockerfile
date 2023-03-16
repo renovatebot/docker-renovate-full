@@ -52,16 +52,16 @@ RUN install-tool golang 1.20.2
 RUN install-tool python 3.11.2
 
 # renovate: datasource=pypi
-RUN install-pip pipenv 2023.2.18
+RUN install-tool pipenv 2023.2.18
 
 # renovate: datasource=github-releases lookupName=python-poetry/poetry
 RUN install-tool poetry 1.4.0
 
 # renovate: datasource=pypi
-RUN install-pip hashin 0.17.0
+RUN install-tool hashin 0.17.0
 
 # renovate: datasource=pypi
-RUN install-pip pip-tools 6.12.3
+RUN install-tool pip-tools 6.12.3
 
 # renovate: datasource=docker versioning=docker
 RUN install-tool rust 1.68.0
@@ -82,7 +82,7 @@ RUN install-tool dotnet 7.0.202
 RUN install-tool pnpm 7.29.1
 
 # renovate: datasource=npm versioning=npm
-RUN install-npm lerna 6.5.1
+RUN install-tool lerna 6.5.1
 
 # renovate: datasource=github-releases lookupName=helm/helm
 RUN install-tool helm v3.11.2
