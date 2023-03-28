@@ -64,7 +64,7 @@ RUN install-tool hashin 0.17.0
 RUN install-tool pip-tools 6.12.3
 
 # renovate: datasource=docker versioning=docker
-RUN install-tool rust 1.68.1
+RUN install-tool rust 1.68.2
 
 # renovate: datasource=github-releases lookupName=containerbase/ruby-prebuild
 RUN install-tool ruby 3.2.1
