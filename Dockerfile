@@ -25,7 +25,7 @@ RUN install-tool yarn 1.22.19
 WORKDIR /usr/src/app
 
 # renovate: datasource=docker versioning=docker
-RUN install-tool docker 23.0.1
+RUN install-tool docker 23.0.2
 
 # renovate: datasource=adoptium-java
 RUN install-tool java 17.0.6+10
