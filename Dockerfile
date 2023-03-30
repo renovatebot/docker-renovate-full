@@ -67,7 +67,7 @@ RUN install-tool pip-tools 6.12.3
 RUN install-tool rust 1.68.2
 
 # renovate: datasource=github-releases lookupName=containerbase/ruby-prebuild
-RUN install-tool ruby 3.2.1
+RUN install-tool ruby 3.2.2
 
 # renovate: datasource=rubygems versioning=ruby
 RUN install-tool bundler 2.4.10
