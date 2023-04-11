@@ -76,7 +76,7 @@ RUN install-tool bundler 2.4.11
 RUN install-tool cocoapods 1.12.0
 
 # renovate: datasource=docker lookupName=mcr.microsoft.com/dotnet/sdk
-RUN install-tool dotnet 7.0.202
+RUN install-tool dotnet 7.0.203
 
 # renovate: datasource=npm versioning=npm
 RUN install-tool pnpm 7.31.0
