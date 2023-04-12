@@ -17,7 +17,7 @@ RUN prepare-tool all
 RUN install-tool node v18.15.0
 
 # renovate: datasource=npm versioning=npm
-RUN install-tool npm 9.6.3
+RUN install-tool npm 9.6.4
 
 # renovate: datasource=npm versioning=npm
 RUN install-tool yarn 1.22.19
