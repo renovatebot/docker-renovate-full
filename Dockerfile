@@ -82,7 +82,7 @@ RUN install-tool dotnet 7.0.203
 RUN install-tool pnpm 7.32.2
 
 # renovate: datasource=npm versioning=npm
-RUN install-tool lerna 6.6.1
+RUN install-tool lerna 6.6.2
 
 # renovate: datasource=github-releases lookupName=helm/helm
 RUN install-tool helm v3.12.0
