@@ -61,7 +61,7 @@ RUN install-tool poetry 1.5.1
 RUN install-tool hashin 0.17.0
 
 # renovate: datasource=pypi
-RUN install-tool pip-tools 6.13.0
+RUN install-tool pip-tools 6.14.0
 
 # renovate: datasource=docker versioning=docker
 RUN install-tool rust 1.70.0
