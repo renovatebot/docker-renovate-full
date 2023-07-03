@@ -1,5 +1,5 @@
 # renovate: datasource=npm depName=renovate versioning=npm
-ARG RENOVATE_VERSION=35.141.3
+ARG RENOVATE_VERSION=35.158.0
 
 # Base image
 #============
@@ -17,7 +17,7 @@ RUN prepare-tool all
 RUN install-tool node v18.16.1
 
 # renovate: datasource=npm versioning=npm
-RUN install-tool npm 9.7.1
+RUN install-tool npm 9.7.2
 
 # renovate: datasource=npm versioning=npm
 RUN install-tool yarn 1.22.19
@@ -31,7 +31,7 @@ RUN install-tool docker 23.0.6
 RUN install-tool java 17.0.7+7
 
 # renovate: datasource=gradle-version versioning=gradle
-RUN install-tool gradle 8.1.1
+RUN install-tool gradle 8.2
 
 # renovate: datasource=github-releases lookupName=containerbase/erlang-prebuild versioning=docker
 RUN install-tool erlang 25.3.2.2
@@ -52,7 +52,7 @@ RUN install-tool golang 1.20.5
 RUN install-tool python 3.11.4
 
 # renovate: datasource=pypi
-RUN install-tool pipenv 2023.6.18
+RUN install-tool pipenv 2023.7.3
 
 # renovate: datasource=github-releases lookupName=python-poetry/poetry
 RUN install-tool poetry 1.5.1
@@ -61,7 +61,7 @@ RUN install-tool poetry 1.5.1
 RUN install-tool hashin 0.17.0
 
 # renovate: datasource=pypi
-RUN install-tool pip-tools 6.13.0
+RUN install-tool pip-tools 6.14.0
 
 # renovate: datasource=docker versioning=docker
 RUN install-tool rust 1.70.0
@@ -70,7 +70,7 @@ RUN install-tool rust 1.70.0
 RUN install-tool ruby 3.2.2
 
 # renovate: datasource=rubygems versioning=ruby
-RUN install-tool bundler 2.4.14
+RUN install-tool bundler 2.4.15
 
 # renovate: datasource=rubygems versioning=ruby
 RUN install-tool cocoapods 1.12.1
@@ -79,7 +79,7 @@ RUN install-tool cocoapods 1.12.1
 RUN install-tool dotnet 7.0.305
 
 # renovate: datasource=npm versioning=npm
-RUN install-tool pnpm 7.33.1
+RUN install-tool pnpm 7.33.2
 
 # renovate: datasource=npm versioning=npm
 RUN install-tool lerna 6.6.2
