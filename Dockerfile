@@ -24,7 +24,7 @@ RUN install-tool yarn 1.22.19
 
 WORKDIR /usr/src/app
 
-# renovate: datasource=docker versioning=docker
+# renovate: datasource=github-releases packageName=moby/moby
 RUN install-tool docker 23.0.6
 
 # renovate: datasource=adoptium-java
