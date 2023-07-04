@@ -1,5 +1,5 @@
 # renovate: datasource=npm depName=renovate versioning=npm
-ARG RENOVATE_VERSION=35.159.1
+ARG RENOVATE_VERSION=36.0.0
 
 # Base image
 #============
@@ -34,10 +34,10 @@ RUN install-tool java 17.0.7+7
 RUN install-tool gradle 8.2
 
 # renovate: datasource=github-releases lookupName=containerbase/erlang-prebuild versioning=docker
-RUN install-tool erlang 25.3.2.2
+RUN install-tool erlang 25.3.2.3
 
 # renovate: datasource=docker versioning=docker
-RUN install-tool elixir 1.15.0
+RUN install-tool elixir 1.15.1
 
 # renovate: datasource=github-releases lookupName=containerbase/php-prebuild
 RUN install-tool php 8.2.7
