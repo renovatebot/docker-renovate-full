@@ -91,6 +91,7 @@ RUN install-tool helm v3.12.1
 RUN install-tool jb v0.5.1
 
 ENV RENOVATE_X_IGNORE_NODE_WARN=true
+ENV RENOVATE_BINARY_SOURCE=global
 
 # exec helper
 COPY bin/ /usr/local/bin/
