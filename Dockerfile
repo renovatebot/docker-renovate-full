@@ -1,5 +1,5 @@
 # renovate: datasource=npm depName=renovate versioning=npm
-ARG RENOVATE_VERSION=35.158.0
+ARG RENOVATE_VERSION=36.0.0
 
 # Base image
 #============
@@ -24,7 +24,7 @@ RUN install-tool yarn 1.22.19
 
 WORKDIR /usr/src/app
 
-# renovate: datasource=docker versioning=docker
+# renovate: datasource=github-releases packageName=moby/moby
 RUN install-tool docker 23.0.6
 
 # renovate: datasource=adoptium-java
@@ -34,10 +34,10 @@ RUN install-tool java 17.0.7+7
 RUN install-tool gradle 8.2
 
 # renovate: datasource=github-releases lookupName=containerbase/erlang-prebuild versioning=docker
-RUN install-tool erlang 25.3.2.2
+RUN install-tool erlang 25.3.2.3
 
 # renovate: datasource=docker versioning=docker
-RUN install-tool elixir 1.15.0
+RUN install-tool elixir 1.15.1
 
 # renovate: datasource=github-releases lookupName=containerbase/php-prebuild
 RUN install-tool php 8.2.7
@@ -91,6 +91,7 @@ RUN install-tool helm v3.12.1
 RUN install-tool jb v0.5.1
 
 ENV RENOVATE_X_IGNORE_NODE_WARN=true
+ENV RENOVATE_BINARY_SOURCE=global
 
 # exec helper
 COPY bin/ /usr/local/bin/
