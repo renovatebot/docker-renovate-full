@@ -39,7 +39,7 @@ jobs:
           command: docker-builder
           platforms: ${{ github.ref_name == 'main' && 'linux/amd64,linux/arm64' || '' }}
           last-only: true
-          dry-run: ${{ github.ref_name != 'main'}}
+          dry-run: ${{ github.ref_name != 'main' }}
           tag-suffix: full
 
       - name: Build and Publish to ghcr.io
