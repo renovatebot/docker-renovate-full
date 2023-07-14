@@ -85,7 +85,7 @@ RUN install-tool pnpm 7.33.3
 RUN install-tool lerna 6.6.2
 
 # renovate: datasource=github-releases lookupName=helm/helm
-RUN install-tool helm v3.12.1
+RUN install-tool helm v3.12.2
 
 # renovate: datasource=github-releases lookupName=jsonnet-bundler/jsonnet-bundler
 RUN install-tool jb v0.5.1
