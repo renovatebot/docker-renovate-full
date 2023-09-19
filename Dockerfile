@@ -1,9 +1,9 @@
 # renovate: datasource=npm depName=renovate versioning=npm
-ARG RENOVATE_VERSION=36.93.7
+ARG RENOVATE_VERSION=36.97.1
 
 # Base image
 #============
-FROM ghcr.io/containerbase/base:9.20.1@sha256:0665c05d3498f20036435bc21c1c9b681eeacd26b2a884ab5c1e0a776d87ee8f AS base
+FROM ghcr.io/containerbase/base:9.20.3@sha256:5c0756dc035a3980110c81d7a028bcbb3a5a06d473ee96c18aeb470a10c769f7 AS base
 
 LABEL name="renovate"
 LABEL org.opencontainers.image.source="https://github.com/renovatebot/renovate" \
@@ -14,7 +14,7 @@ LABEL org.opencontainers.image.source="https://github.com/renovatebot/renovate" 
 RUN prepare-tool all
 
 # renovate: datasource=node
-RUN install-tool node v18.17.1
+RUN install-tool node v18.18.0
 
 # renovate: datasource=npm versioning=npm
 RUN install-tool npm 9.8.1
@@ -43,7 +43,7 @@ RUN install-tool elixir 1.15.4
 RUN install-tool php 8.2.10
 
 # renovate: datasource=github-releases lookupName=composer/composer
-RUN install-tool composer 2.6.2
+RUN install-tool composer 2.6.3
 
 # renovate: datasource=golang-version
 RUN install-tool golang 1.21.1
@@ -79,7 +79,7 @@ RUN install-tool cocoapods 1.12.1
 RUN install-tool dotnet 7.0.401
 
 # renovate: datasource=npm versioning=npm
-RUN install-tool pnpm 8.7.4
+RUN install-tool pnpm 8.7.5
 
 # renovate: datasource=npm versioning=npm
 RUN install-tool lerna 7.2.0
