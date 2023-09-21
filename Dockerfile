@@ -1,5 +1,5 @@
 # renovate: datasource=npm depName=renovate versioning=npm
-ARG RENOVATE_VERSION=36.97.1
+ARG RENOVATE_VERSION=36.102.0
 
 # Base image
 #============
@@ -64,7 +64,7 @@ RUN install-tool hashin 0.17.0
 RUN install-tool pip-tools 6.14.0
 
 # renovate: datasource=docker versioning=docker
-RUN install-tool rust 1.72.0
+RUN install-tool rust 1.72.1
 
 # renovate: datasource=github-releases lookupName=containerbase/ruby-prebuild
 RUN install-tool ruby 3.2.2
@@ -82,7 +82,7 @@ RUN install-tool dotnet 7.0.401
 RUN install-tool pnpm 8.7.5
 
 # renovate: datasource=npm versioning=npm
-RUN install-tool lerna 7.2.0
+RUN install-tool lerna 7.3.0
 
 # renovate: datasource=github-releases lookupName=helm/helm
 RUN install-tool helm v3.12.3
