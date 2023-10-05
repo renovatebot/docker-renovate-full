@@ -31,7 +31,7 @@ RUN install-tool docker v24.0.6
 RUN install-tool java 17.0.8+101
 
 # renovate: datasource=gradle-version versioning=gradle
-RUN install-tool gradle 8.3
+RUN install-tool gradle 8.4
 
 # renovate: datasource=github-releases lookupName=containerbase/erlang-prebuild versioning=docker
 RUN install-tool erlang 26.0.2.0
