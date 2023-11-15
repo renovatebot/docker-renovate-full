@@ -93,6 +93,9 @@ RUN install-tool jb v0.5.1
 # renovate: datasource=github-tags packageName=NixOS/nix
 RUN install-tool nix 2.18.1
 
+# renovate: datasource=github-tags packageName=bazelbuild/bazelisk
+RUN install-tool bazelisk v1.18.0
+
 ENV RENOVATE_X_IGNORE_NODE_WARN=true
 ENV RENOVATE_BINARY_SOURCE=global
 
