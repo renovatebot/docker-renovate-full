@@ -91,7 +91,7 @@ RUN install-tool helm v3.13.1
 RUN install-tool jb v0.5.1
 
 # renovate: datasource=github-tags packageName=NixOS/nix
-RUN install-tool nix 2.19.0
+RUN install-tool nix 2.19.1
 
 ENV RENOVATE_X_IGNORE_NODE_WARN=true
 ENV RENOVATE_BINARY_SOURCE=global
