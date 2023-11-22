@@ -90,6 +90,9 @@ RUN install-tool helm v3.13.1
 # renovate: datasource=github-releases lookupName=jsonnet-bundler/jsonnet-bundler
 RUN install-tool jb v0.5.1
 
+# renovate: datasource=npm
+RUN install-tool bun v1.0.13
+
 # renovate: datasource=github-tags packageName=NixOS/nix
 RUN install-tool nix 2.19.1
 
