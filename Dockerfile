@@ -94,7 +94,7 @@ RUN install-tool jb v0.5.1
 RUN install-tool bun v1.0.13
 
 # renovate: datasource=github-tags packageName=NixOS/nix
-RUN install-tool nix 2.19.1
+RUN install-tool nix 2.19.2
 
 ENV RENOVATE_X_IGNORE_NODE_WARN=true
 ENV RENOVATE_BINARY_SOURCE=global
