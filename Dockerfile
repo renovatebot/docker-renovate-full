@@ -97,7 +97,7 @@ RUN install-tool bun 1.0.14
 RUN install-tool nix 2.19.2
 
 # renovate: datasource=github-tags packageName=bazelbuild/bazelisk
-RUN install-tool bazelisk v1.18.0
+RUN install-tool bazelisk v1.19.0
 
 ENV RENOVATE_X_IGNORE_NODE_WARN=true
 ENV RENOVATE_BINARY_SOURCE=global
