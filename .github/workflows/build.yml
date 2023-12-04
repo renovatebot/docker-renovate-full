@@ -38,7 +38,7 @@ jobs:
         uses: containerbase/internal-tools@4499006aa0823959d0d457fdb12ecf0038643d5a # v3.0.20
         with:
           command: docker-builder
-          platforms: ${{ github.ref_name == 'main' && 'linux/amd64,linux/arm64' || '' }}
+          platforms: linux/amd64,linux/arm64 # ${{ github.ref_name == 'main' && 'linux/amd64,linux/arm64' || '' }}
           image-prefixes: ghcr.io/${{ github.repository_owner }}
           last-only: true
           dry-run: ${{ github.ref_name != 'main' }}
