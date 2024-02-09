@@ -1,9 +1,9 @@
 # renovate: datasource=npm depName=renovate versioning=npm
-ARG RENOVATE_VERSION=37.83.3
+ARG RENOVATE_VERSION=37.180.1
 
 # Base image
 #============
-FROM ghcr.io/renovatebot/base-image:1.2.0-full@sha256:28c158bf88b1337f4ec1f1437be5ffd0b9ccef7260169d39a6ec19b3a1ee5237 AS base
+FROM ghcr.io/renovatebot/base-image:1.22.0-full@sha256:7a371dcfff219fc638301ce1856d92ee2a09993f628a7b641d8da12c6e23eb0d AS base
 
 LABEL name="renovate"
 LABEL org.opencontainers.image.source="https://github.com/renovatebot/renovate" \
